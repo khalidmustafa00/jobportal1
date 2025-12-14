@@ -125,7 +125,7 @@
 
                                 <div th:if="${profile.resume != null}" class="mt-2">
                                     <a sec:authorize="hasAuthority('Recruiter')"
-                                       th:href="${#strings.replace(profile.resume, '/upload/', '/upload/fl_attachment/')}"
+                                    th:href="${#strings.replace(#strings.replace(profile.resume, 'http://', 'https://'), '/upload/', '/upload/fl_attachment/')}"
                                        class="btn btn-primary btn-sm">
                                         Download Resume
                                     </a>
